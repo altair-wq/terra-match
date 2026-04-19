@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function ProjectDetails() {
   const { id } = useParams();
   const [data, setData] = useState<any>(null);
-  const [apiKey, setApiKey] = useState("AIzaSyBRJC_lnXBZsO-cVbzS6UogJ0z7GPjLEiI");
+  const [apiKey, setApiKey] = useState(process.env.NEXT_PUBLIC_GEMINI_API_KEY || "");
   const [running, setRunning] = useState(false);
   const [chatPrompt, setChatPrompt] = useState("");
   const [chatReply, setChatReply] = useState("");
